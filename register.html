@@ -29,11 +29,84 @@
     </header>
 
     <main>
-      <!-- <section class="register-form">
-			<h2>Anmälan till konferensen</h2>
-			<form action=""></form>
+      <section class="form-container">
+        <section class="form-register">
+          <h2>Anmälan till konferensen</h2>
+          <form action="submitted-registration-message.html" method="post">
+            <label for="name">Namn:<span aria-hidden="true">*</span></label>
+            <input type="text" id="name" value="" name="name" placeholder="John Smith" minlength="2" required/>
 
-		</section> -->
+            <label for="address">Adress:<span aria-hidden="true">*</span></label>
+            <input type="text" id="adress" value="" name="address" placeholder="Stockholm" required/>
+
+            <label for="email">E-post:<span aria-hidden="true">*</span></label>
+            <input type="email" id="email" value="" name="email" placeholder="email@address.com" required/>
+
+            <fieldset>
+              <legend>Välj dagar<span aria-hidden="true">*</span></legend>
+			  <p class="hint">Minst en dag måste väljas.</p>
+
+              <!-- Nested input in label + same id, so no need to use: <label for="easy"><input id="easy"></label> -->
+
+
+              <label for="day-1">
+                <input type="checkbox" id="day-1" name="days" value="day-1" />
+                Day 1 - 17/10
+              </label>
+
+              <label for="day-2">
+                <input type="checkbox" id="day-2" name="days" value="day-2" />
+                Day 2 - 18/10
+              </label>
+
+              <label for="day-3">
+                <input type="checkbox" id="day-3" name="days" value="day-3" />
+                Day 3 - 19/10
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Matval<span aria-hidden="true">*</span></legend>
+
+              <label for="meat">
+                <input
+                  type="radio"
+                  name="meal"
+                  id="meat"
+                  value="meat"
+                  required
+                />Kött</label
+              >
+
+
+              <label for="fish">
+                <input
+                  type="radio"
+                  name="meal"
+                  id="fish"
+                  value="fish"
+                  required
+                />Fisk</label>
+
+
+              <label for="veg"
+                ><input
+                  type="radio"
+                  name="meal"
+                  id="veg"
+                  value="veg"
+                  required
+                />Vegetarisk</label
+              >
+            </fieldset>
+
+			<label for="allergies"></label>
+			<textarea name="allergies" id="allergies" placeholder="Ex. gluten"></textarea>
+			<button type="submit" class="btn">Skicka anmälan</button>
+		  </form>
+        </section>
+      </section>
+
     </main>
 
     <footer>
