@@ -16,9 +16,9 @@
 
   --text-dark: #0d1521;
   --text-light: #fef4f0;
-  --text-dark-shadow:#1a2a41;
-  --btn-delete:#e2e1e1;
-  --btn-delete-hover:#d2d0d0;
+  --text-dark-shadow: #1a2a41;
+  --btn-delete: #e2e1e1;
+  --btn-delete-hover: #d2d0d0;
 
   --radius: 0.2rem;
 }
@@ -34,39 +34,6 @@ body {
 }
 
 /* Header */
-/* .navbar {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  background: var(--background-two);
-  color: var(--text-light);
-  padding: 1rem 1.5rem;
-
-  .separator {
-    flex-grow: 1;
-  }
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-
-  a {
-    color: var(--text-light);
-    text-decoration: none;
-  }
-  a:hover {
-    color: var(--accent-three-hover);
-  }
-} */
-
-/* Header */
 
 /* hide checkbox visually but keep accessible */
 .menu-toggle {
@@ -74,20 +41,19 @@ body {
   width: 1px;
   height: 1px;
   padding: 0;
-  /* margin: -1px; */
-  /* overflow: hidden; */
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
 }
 
+/* 3 */
 /* navbar */
 .navbar {
   display: flex;
   align-items: center;
   background: var(--background-two);
   color: var(--text-light);
-  padding: 1rem 1.5rem;
+  padding: 1.6rem 1.6rem;
   /* gap: 0.5rem; */
 }
 
@@ -114,7 +80,7 @@ body {
 /* hamburger label */
 .menu-button {
   display: inline-block;
-  /* cursor: pointer; */
+  cursor: pointer;
   font-size: 1.5rem;
   color: var(--text-light);
   background: none;
@@ -130,26 +96,36 @@ body {
   border-radius: 4px;
 }
 
+/* 1 */
 /* mobile: menu hidden by default */
 .nav-links {
   display: none;
   list-style: none;
   margin: 0;
-  padding: 0;
-  /* width: 100%; */
-  /* background: var(--background-two); */
+  /* padding: 0.8rem 1rem; */
+  position: absolute;
+  /* top: 1rem; */
+  right: 1rem;
+  flex-direction: row;
+  /* gap: 1.6rem; */
+  /* padding: 2 rem; */
+  background: var(--background-two);
 }
 
-/* stacked vertical links for mobile */
+/* 2 */
+/* stacked links for mobile */
 .nav-links li a {
   /* display: block; */
-  padding: 0.2rem 1rem;
-  display: flex;
-  /* gap: -0.5rem; */
+  padding: 1rem;
+  /* margin: 1rem; */
+
+  /* display: flex;
+  flex-direction: row; */
+
   color: var(--text-light);
   text-decoration: none;
   /* font-weight: 600; */
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.08); */
 }
 
 /* hover/focus */
@@ -162,7 +138,7 @@ body {
 /* show links when checked */
 
 .menu-toggle:checked ~ .nav-links {
-  display: block;
+  display: flex;
 }
 
 /* hide hamburger when menu is open/it is clicked */
@@ -179,7 +155,7 @@ body {
   }
 
   .nav-links {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     gap: 1.2rem;
     width: auto;
@@ -203,7 +179,6 @@ body {
   .nav-links li a:hover,
   .nav-links li a:focus {
     color: var(--accent-three-hover);
-    /* background: none; */
   }
 }
 
@@ -251,24 +226,27 @@ main {
 
 article {
   background: var(--background-three);
-  padding: 2rem;
-  gap: 5rem;
+  padding: 0.2rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 article:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 700px) {
+  article {
+    padding: 2rem;
+  }
 }
 
 .seminar-days {
-  gap: 2rem;
-  padding: 2.8rem;
+  gap: 2.6rem;
+  padding: 0.6rem;
   display: flex;
   flex-direction: column;
-
-
 
   h3 {
     text-align: center;
@@ -279,22 +257,25 @@ article:hover {
   ul li {
     list-style: none;
     padding: 0.4rem;
-	/* a:hover {
-		text-shadow: #0d1521;
-	} */
   }
   ul li a {
     text-decoration: none;
     color: var(--text-dark);
-	transition: text-shadow 0.4s ease, color 1s ease;
+    transition: text-shadow 0.4s ease, color 1s ease;
 
     span {
       font-weight: 600;
     }
   }
   ul li a:hover {
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  	color: var(--accent-three-hover);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: var(--accent-three-hover);
+  }
+}
+
+@media (min-width: 700px) {
+  .seminar-days {
+    padding: 1.2rem;
   }
 }
 
@@ -357,27 +338,6 @@ article:hover {
     grid-row: span 2;
   }
 }
-
-/*  Footer  */
-/* footer {
-	text-align: center;
-	display: flex;
-	justify-content: flex-end;
-	background: var(--background-two);
-	color: var(--text-light);
-	padding: 1rem;
-
-	.separator {
-	  flex-grow: 1;
-	}
-  }
-  footer a {
-	color: var(--light);
-	text-decoration: none;
-  }
-  footer a:hover {
-	text-decoration: underline;
-  } */
 
 footer {
   background: var(--background-two);
@@ -444,7 +404,6 @@ address {
 
   .footer-bottom {
     grid-column: span 3;
-
   }
 
   .footer-section ul li {
@@ -488,9 +447,10 @@ address {
     opacity: 0.8;
   }
 
-  /* input:invalid, textarea:invalid {
-	border-color: red;
-  } */
+  input:invalid,
+  textarea:invalid {
+    border-color: red;
+  }
 }
 
 fieldset {
@@ -499,61 +459,60 @@ fieldset {
 }
 
 .form-buttons {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 1rem;
-	margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
-  }
+.form-btn {
+  background: var(--background-two);
+  color: var(--text-light);
+  border: none;
+  padding: 1.2rem 6.4rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
 
-  .form-btn {
-	background: var(--background-two);
-	color: var(--text-light);
-	border: none;
-	padding: 1.2rem 6.4rem;
-	border-radius: var(--radius);
-	cursor: pointer;
-  }
+.form-btn:hover {
+  transform: scale(1.04);
+}
 
-  .form-btn:hover {
-	transform: scale(1.04);
-  }
+.reset-btn {
+  background: var(--btn-delete);
+  color: var(--text-dark);
+}
 
-  .reset-btn {
-	background: var(--btn-delete);
-	color: var(--text-dark);
-  }
+.reset-btn:hover {
+  background: var(--btn-delete-hover);
+}
 
-  .reset-btn:hover {
-	background: var(--btn-delete-hover);
+@media (min-width: 700px) {
+  .form-buttons {
+    flex-direction: row;
   }
-
-  @media (min-width: 700px) {
-	.form-buttons {
-		flex-direction: row;
-	}
-  }
+}
 
 .contact {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-	 h2{
-		color: var(--text-dark);
-		padding-bottom: 1rem;
-	 }
-	 a {
-		text-decoration: none;
-		color: var(--text-dark);
+  padding: 2rem;
 
-	 }
-	 a:hover {
-		color: var(--accent-three-hover);
-	 }
+  h2 {
+    color: var(--text-dark);
+    padding: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+  a:hover {
+    color: var(--accent-three-hover);
+  }
 }
 
 /* Form submitted  */
@@ -588,12 +547,11 @@ fieldset {
 /* Sponsors */
 
 .sponsors {
-	display: flex;
-	justify-content: center;
-	padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 
-	h2 {
-		color: var(--text-dark);
-
-	}
+  h2 {
+    color: var(--text-dark);
+  }
 }

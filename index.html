@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bättre webb 2025 – Frontendkonferens i Göteborg</title>
+    <title>Bättre webb</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -11,44 +11,35 @@
     />
   </head>
   <body>
-    <!-- <header>
-      <nav class="navbar">
-        <h1 class="logo">Bättre webb 2025</h1>
-        <div class="separator"></div>
+    <header>
+      <nav class="navbar" role="navigation" aria-label="Huvudnavigering">
+        <h1 class="logo"><a href="index.html">Bättre webb 2025</a></h1>
+		<!-- <h1 class="logo"><a href="index.html">BW</a></h1> -->
+        <div class="separator" aria-hidden="true"></div>
+
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-label="Öppna eller stäng menyn"
+        />
+        <label for="menu-toggle" class="menu-button" aria-hidden="true"
+          >☰</label
+        >
+
         <ul class="nav-links">
           <li><a href="index.html">Hem</a></li>
           <li><a href="sponsors.html">Sponsorer</a></li>
           <li><a href="register.html">Anmäl dig</a></li>
         </ul>
       </nav>
-      <div class="hero">
-        <h2>Frontendkonferensen i Göteborg</h2>
-        <p>Tre dagar av inspiration, kod och community: 17–19 oktober</p>
-        <a href="register.html" class="btn register">Registrera dig nu</a>
-      </div>
-    </header> -->
+    </header>
 
-	<header>
-		<nav class="navbar" role="navigation" aria-label="Huvudnavigering">
-		  <h1 class="logo"><a href="index.html">Bättre webb 2025</a></h1>
-		  <div class="separator" aria-hidden="true"></div>
-
-		  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Öppna eller stäng menyn">
-		  <label for="menu-toggle" class="menu-button" aria-hidden="true">☰</label>
-
-		  <ul class="nav-links">
-			<li><a href="index.html">Hem</a></li>
-			<li><a href="sponsors.html">Sponsorer</a></li>
-			<li><a href="register.html">Anmäl dig</a></li>
-		  </ul>
-		</nav>
-	  </header>
-
-	<div class="hero">
-        <h2>Frontend konferensen i Göteborg</h2>
-        <p>Tre dagar av inspiration, kod och community: 17–19 oktober</p>
-        <a href="register.html" class="btn register">Registrera dig nu</a>
-      </div>
+    <div class="hero">
+      <h2>Frontend konferensen i Göteborg</h2>
+      <p>Tre dagar av inspiration, kod och community: 17–19 oktober</p>
+      <a href="register.html" class="btn register">Registrera dig nu</a>
+    </div>
 
     <main>
       <section class="seminars">
@@ -60,27 +51,34 @@
               <li>
                 <a href="https://www.w3schools.com/">
                   <span> Modern CSS: </span> Från Grid till Container Queries -
-                  Utforska de senaste CSS-teknikerna som låter dig bygga flexibla, moderna och tillgängliga layouter – utan externa ramverk eller komplex kod.
+                  Utforska de senaste CSS-teknikerna som låter dig bygga
+                  flexibla, moderna och tillgängliga layouter – utan externa
+                  ramverk eller komplex kod.
                 </a>
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
                   ><span>Designsystem 2025:</span> Hur stora företag tänker -
-                  Lär dig hur globala företag planerar, dokumenterar och implementerar designsystem som skalar över team, projekt och produktlinjer.</a
+                  Lär dig hur globala företag planerar, dokumenterar och
+                  implementerar designsystem som skalar över team, projekt och
+                  produktlinjer.</a
                 >
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
                   ><span>Tillgänglighet på riktigt:</span> Små ändringar, stor
-                  skillnad - Praktiska exempel på hur du med enkla förbättringar i HTML och CSS skapar webbplatser som fungerar för alla användare.</a
+                  skillnad - Praktiska exempel på hur du med enkla förbättringar
+                  i HTML och CSS skapar webbplatser som fungerar för alla
+                  användare.</a
                 >
               </li>
-			  <li>
+              <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>Webbanimationer som engagerar: </span> Skapa rörelse och liv i din design med CSS och JavaScript – utan att störa tillgänglighet eller prestanda.</a
+                  ><span>Webbanimationer som engagerar: </span> Skapa rörelse
+                  och liv i din design med CSS och JavaScript – utan att störa
+                  tillgänglighet eller prestanda.</a
                 >
               </li>
-
             </ul>
           </article>
 
@@ -90,24 +88,32 @@
               <li>
                 <a href="https://www.w3schools.com/"
                   ><span>Prestanda 2025:</span> Snabba sidor, nöjda användare -
-				  Optimera bilder, kod och laddningstider. Lär dig hur du mäter och förbättrar prestanda med moderna verktyg och strategier.</a
+                  Optimera bilder, kod och laddningstider. Lär dig hur du mäter
+                  och förbättrar prestanda med moderna verktyg och
+                  strategier.</a
                 >
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
                   ><span>Från Figma till kod:</span> NEffektiva arbetsflöden -
-				  Hur designers och utvecklare samarbetar smartare. Automatisera din process och undvik dubbelarbete med komponentbaserad design.</a
+                  Hur designers och utvecklare samarbetar smartare. Automatisera
+                  din process och undvik dubbelarbete med komponentbaserad
+                  design.</a
                 >
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
                   ><span>AI i webbutveckling:</span> Från hype till verktyg -
-				  Upptäck hur AI hjälper frontendutvecklare att skriva bättre kod, testa snabbare och skapa smartare användarupplevelser – ansvarsfullt.</a
+                  Upptäck hur AI hjälper frontendutvecklare att skriva bättre
+                  kod, testa snabbare och skapa smartare användarupplevelser –
+                  ansvarsfullt.</a
                 >
               </li>
-			  <li>
+              <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>Verktyg för moderna team:</span> En introduktion till verktyg som GitHub Copilot, Netlify och Vercel – bygg, testa och publicera snabbare tillsammans.</a
+                  ><span>Verktyg för moderna team:</span> En introduktion till
+                  verktyg som GitHub Copilot, Netlify och Vercel – bygg, testa
+                  och publicera snabbare tillsammans.</a
                 >
               </li>
             </ul>
@@ -118,23 +124,31 @@
             <ul>
               <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>Säkerhet för frontendutvecklare:</span> Lär dig upptäcka och förebygga vanliga hot som XSS och CSRF – bygg säkrare applikationer direkt i frontendlagret.</a
+                  ><span>Säkerhet för frontendutvecklare:</span> Lär dig
+                  upptäcka och förebygga vanliga hot som XSS och CSRF – bygg
+                  säkrare applikationer direkt i frontendlagret.</a
                 >
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>Bygg hållbara webbar:</span> Miljö och prestanda
-				  Smarta val inom design, hosting och kod kan minska din webbplats klimatpåverkan – lär dig skapa en mer hållbar webbnärvaro.</a
+                  ><span>Bygg hållbara webbar:</span> Miljö och prestanda Smarta
+                  val inom design, hosting och kod kan minska din webbplats
+                  klimatpåverkan – lär dig skapa en mer hållbar webbnärvaro.</a
                 >
               </li>
               <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>Framtiden för HTML och CSS:</span> Vad kommer härnäst? En inblick i nya standarder, experimentella API:er och hur webben utvecklas under de kommande åren.</a
+                  ><span>Framtiden för HTML och CSS:</span> Vad kommer härnäst?
+                  En inblick i nya standarder, experimentella API:er och hur
+                  webben utvecklas under de kommande åren.</a
                 >
               </li>
-			  <li>
+              <li>
                 <a href="https://www.w3schools.com/"
-                  ><span>UX-trender 2025: Människa möter teknik:</span> Hur AI, röstgränssnitt och personalisering påverkar användarupplevelsen – och vad det betyder för framtidens digitala produkter.</a
+                  ><span>UX-trender 2025: Människa möter teknik:</span> Hur AI,
+                  röstgränssnitt och personalisering påverkar
+                  användarupplevelsen – och vad det betyder för framtidens
+                  digitala produkter.</a
                 >
               </li>
             </ul>
@@ -192,33 +206,33 @@
 
         <!-- Contacts -->
         <div class="footer-section contacts">
-			<address>
-          <h3>Kontakt</h3>
-          <p>Bättre webb AB</p>
-          <p>Kungsgatan 45<br />411 15 Sverige<br /></p>
-          <p><a href="mailto:info@battreweb.se">info@battreweb.se</a></p>
-			</address>
+          <address>
+            <h3>Kontakt</h3>
+            <p>Bättre webb AB</p>
+            <p>Kungsgatan 45<br />411 15 Sverige<br /></p>
+            <p><a href="mailto:info@battreweb.se">info@battreweb.se</a></p>
+          </address>
         </div>
 
         <!-- Follow Us -->
 
         <div class="footer-section follow">
-			<div>
-          <h3>Följ oss</h3>
-          <ul>
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-github"> </i> GitHub</a>
-            </li>
-          </ul>
+          <div>
+            <h3>Följ oss</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-github"> </i> GitHub</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-	  </div>
 
       <div class="footer-bottom">
         <p>© 2025 Bättre webb | All rights reserved</p>
