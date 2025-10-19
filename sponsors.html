@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -12,37 +12,67 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <h1 class="logo">Bättre webb 2025</h1>
-        <div class="separator"></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="sponsors.html">Sponsorer</a></li>
-          <li><a href="register.html">Anmäl dig</a></li>
-        </ul>
-      </nav>
-    </header>
+		<nav class="navbar" role="navigation" aria-label="Huvudnavigering">
+		  <h1 class="logo"><a href="./index.html">Bättre webb 2025</a></h1>
+		  <div class="separator" aria-hidden="true"></div>
 
-    <div class="hero">
+		  <input
+			type="checkbox"
+			id="menu-toggle"
+			class="menu-toggle"
+			aria-label="Öppna eller stäng menyn"
+		  />
+		  <label for="menu-toggle" class="menu-button" aria-hidden="true"
+			>☰</label
+		  >
+
+		  <ul class="nav-links">
+			<li><a href="./index.html">Hem</a></li>
+			<li><a href="./sponsors.html">Sponsorer</a></li>
+			<li><a href="./register.html">Anmäl dig</a></li>
+		  </ul>
+		</nav>
+	  </header>
+
+    <div class="hero cosmo">
       <h2>Frontend konferensen i Göteborg</h2>
       <p>Tre dagar av inspiration, kod och community: 17–19 oktober</p>
-      <a href="register.html" class="btn register">Registrera dig nu</a>
+      <a href="./register.html" class="btn register">Registrera dig nu</a>
     </div>
 
     <main>
       <section class="sponsors">
         <h2>Våra sponsorer</h2>
-      </section>
+		<div class="sponsor-grid">
+			<article class="sponsor-card">
+			  <img src="./img/TechNova.png" alt="Logotyp för TechNova AB">
+			  <h3>TechNova AB</h3>
+			  <p>Ledande inom molnlösningar och frontendoptimering för moderna webblösningar.</p>
+			</article>
 
-      <!-- <section class="speakers">
-		 <section class="speakers">
-		</section> -->
+			<article class="sponsor-card">
+			  <img src="./img/Designify.png" alt="Logotyp för Designify">
+			  <h3>Designify</h3>
+			  <p>Kreativ byrå som hjälper företag att skapa användarcentrerade digitala upplevelser.</p>
+			</article>
+
+			<article class="sponsor-card">
+			  <img src="./img/CodeWorks.png" alt="Logotyp för CodeWorks">
+			  <h3>CodeWorks</h3>
+			  <p>Utvecklar avancerade JavaScript-ramverk och verktyg för moderna frontendteam.</p>
+			</article>
+
+			<article class="sponsor-card">
+			  <img src="./img/WebEdge.png" alt="Logotyp för WebEdge">
+			  <h3>WebEdge</h3>
+			  <p>Specialister på tillgänglighet, prestanda och responsiv design.</p>
+			</article>
+		  </div>
+      </section>
     </main>
 
     <footer>
       <div class="footer-container">
-        <!-- Events -->
-
         <div class="footer-section">
           <div class="events">
             <h3>Våra event</h3>
@@ -53,8 +83,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- Contacts -->
         <div class="footer-section contacts">
           <address>
             <h3>Kontakt</h3>
@@ -63,21 +91,18 @@
             <p><a href="mailto:info@battreweb.se">info@battreweb.se</a></p>
           </address>
         </div>
-
-        <!-- Follow Us -->
-
         <div class="footer-section follow">
           <div>
             <h3>Följ oss</h3>
             <ul>
               <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> Instagram</a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-github"> </i> GitHub</a>
+                <a href="https://github.com/"><i class="fa-brands fa-github"> </i> GitHub</a>
               </li>
             </ul>
           </div>
