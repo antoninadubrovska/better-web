@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -12,19 +12,29 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <h1 class="logo">Bättre webb 2025</h1>
-        <div class="separator"></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="sponsors.html">Sponsorer</a></li>
-          <li><a href="register.html">Anmäl dig</a></li>
-        </ul>
-      </nav>
+		<nav class="navbar" role="navigation" aria-label="Huvudnavigering">
+		  <h1 class="logo"><a href="./index.html">Bättre webb 2025</a></h1>
+		  <div class="separator" aria-hidden="true"></div>
 
-    </header>
+		  <input
+			type="checkbox"
+			id="menu-toggle"
+			class="menu-toggle"
+			aria-label="Öppna eller stäng menyn"
+		  />
+		  <label for="menu-toggle" class="menu-button" aria-hidden="true"
+			>☰</label
+		  >
 
-	<div class="hero">
+		  <ul class="nav-links">
+			<li><a href="./index.html">Hem</a></li>
+			<li><a href="./sponsors.html">Sponsorer</a></li>
+			<li><a href="./register.html">Anmäl dig</a></li>
+		  </ul>
+		</nav>
+	  </header>
+
+	<div class="hero cosmo">
         <h2>Frontend konferensen i Göteborg</h2>
         <p>Tre dagar av inspiration, kod och community: 17–19 oktober</p>
       </div>
@@ -33,12 +43,12 @@
       <section class="form-container">
         <section class="form-register">
           <h2>Anmälan till konferensen</h2>
-          <form action="submitted-registration-message.html" method="post">
+          <form action="./submitted-registration-message.html" method="post">
             <label for="name">Namn:<span aria-hidden="true">*</span></label>
             <input type="text" id="name" value="" name="name" placeholder="John Smith" minlength="2" required/>
 
             <label for="address">Adress:<span aria-hidden="true">*</span></label>
-            <input type="text" id="adress" value="" name="address" placeholder="Stockholm" required/>
+            <input type="text" id="address" value="" name="address" placeholder="Stockholm" required/>
 
             <label for="email">E-post:<span aria-hidden="true">*</span></label>
             <input type="email" id="email" value="" name="email" placeholder="email@address.com" required/>
@@ -46,9 +56,6 @@
             <fieldset>
               <legend>Välj dagar<span aria-hidden="true">*</span></legend>
 			  <p class="hint">Minst en dag måste väljas.</p>
-
-              <!-- Nested input in label + same id, so no need to use: <label for="easy"><input id="easy"></label> -->
-
 
               <label for="day-1">
                 <input type="checkbox" id="day-1" name="days" value="day-1" />
@@ -126,8 +133,6 @@
 
     <footer>
 		<div class="footer-container">
-		  <!-- Events -->
-
 		  <div class="footer-section">
 			<div class="events">
 			  <h3>Våra event</h3>
@@ -138,8 +143,6 @@
 			  </ul>
 			</div>
 		  </div>
-
-		  <!-- Contacts -->
 		  <div class="footer-section contacts">
 			  <address>
 			<h3>Kontakt</h3>
@@ -148,21 +151,18 @@
 			<p><a href="mailto:info@battreweb.se">info@battreweb.se</a></p>
 			  </address>
 		  </div>
-
-		  <!-- Follow Us -->
-
 		  <div class="footer-section follow">
 			  <div>
 			<h3>Följ oss</h3>
 			<ul>
 			  <li>
-				<a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+				<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> Instagram</a>
 			  </li>
 			  <li>
-				<a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+				<a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
 			  </li>
 			  <li>
-				<a href="#"><i class="fa-brands fa-github"> </i> GitHub</a>
+				<a href="https://github.com/"><i class="fa-brands fa-github"> </i> GitHub</a>
 			  </li>
 			</ul>
 		  </div>
